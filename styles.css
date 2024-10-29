@@ -1,0 +1,404 @@
+@import url(swiper.css);
+/* Variáveis de cores e fontes */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #1c1c1c;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --light-color: #fff;
+    --accent-color: #f2f2f2;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: var(--light-color);
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header nav a {
+    color: var(--light-color);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+.btn-header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-header:hover {
+    background-color: #0a58ca;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #1c1c1c, #333);
+    color: var(--light-color);
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-main {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #0a58ca;
+}
+
+.hero-image img {
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+/* Marquee Section */
+.marquee {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--accent-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.testimonial-cards {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Each individual card */
+.card {
+    background: var(--light-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Services */
+.services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background: var(--light-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-content img {
+    border-radius: 50%;
+    max-width: 220px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.btn-about {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-about:hover {
+    background-color: #0a58ca;
+}
+
+/* Diferenciais */
+.differentials {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.differential-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.differential-card {
+    background: var(--light-color);
+    padding: 30px;
+    max-width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.differential-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.differential-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulário de Contato */
+.cta {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #0a58ca;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn-submit {
+    padding: 15px 30px;
+    background-color: #0a58ca;
+    color: var(--light-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #084298;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--light-color);
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #444;
+}
+
+.btn-close {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer nav a {
+    color: var(--light-color);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer nav a:hover {
+    color: var(--primary-color);
+}
+/* Slick Carousel customization */
+.slick-prev, .slick-next {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: var(--secondary-color);
+}
+
+.slick-dots li button:before {
+    color: var(--primary-color);
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--secondary-color);
+}
