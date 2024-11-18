@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <meta name="description" content="Consultoria Jurídica especializada em soluções personalizadas. Nossa equipe experiente está pronta para ajudar com legalização, conformidade e muito mais.">
     <title>Consultoria Jurídica</title>
+    <link rel="preload" href="./assets/css/reset.css" as="style">
+    <link rel="preload" href="./assets/css/main.css" as="style">
+    <link rel="preload" href="./assets/images/bghr.webp" as="image">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <style>
+        :root {
+            --primary-color: #457b9d;
+            --secondary-color: #1d3557;
+            --light-color: #ffffff;
+            --font-family: 'Arial', sans-serif;
+            --btn-radius: 8px;
+            --transition-speed: 0.3s;
+        }
+    
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+        }
+    
+        /* Hero Section */
+        .hero {
+            background-image: url('./assets/images/bghr.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+    
 </head>
 <body>
     <!-- Cabeçalho -->
