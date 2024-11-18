@@ -45,6 +45,20 @@
             padding: 50px 20px;
             overflow: hidden;
         }
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-division {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
         .hero h1 {
             font-size: 2.5rem;
             color: var(--secondary-color);
@@ -67,6 +81,34 @@
         .btn:hover {
             background: var(--secondary-color);
         }
+        @media screen and (max-width: 768px) {
+        .hero {
+            flex-direction: column; /* Garante que os elementos fiquem em coluna */
+            padding: 20px; /* Ajuste do espaçamento */
+            text-align: center;
+            height: auto; /* Evita alturas fixas */
+        }
+        .hero-content h1 {
+            font-size: 1.8rem; /* Reduz o tamanho do texto */
+        }
+        .hero-content p {
+            font-size: 0.7rem; /* Reduz o tamanho do parágrafo */
+        }
+        .btn {
+            font-size: 0.9rem;
+            padding: 8px 15px; /* Ajuste de padding */
+        }
+        .logos img {
+            width: 120px;
+            height: auto;
+            margin: 5px; /* Espaçamento entre logos */
+        }
+        .hero-image img {
+            width: 100%; /* Imagem responsiva */
+            height: auto;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -86,37 +128,42 @@
     <!-- Seção Hero -->
     <section class="hero">
         <div class="container hero-container">
-            <div class="hero-content">
+            <div class="hero-division">
                 <div class="badge">
                     <p class="high">Novo</p>
                     <p>Fique conectado às oportunidades e novidades</p>
                 </div>
-                <h1>Sua Solução<br><span class="highlight">Consultoria Jurídica</span></h1>
-                <p>Estamos aqui para ajudar você a cuidar da sua legalidade com o melhor serviço, especialmente para você.</p>
-                <a href="#contact" class="btn btn-primary">Comece Agora</a>
-                <p class="trusted">Confiado por 10+ empresas na Indonésia</p>
-                <div class="logos">
-                    <img src="./assets/images/icons/Airbnb Logo.webp" alt="Airbnb" width="150" height="50">
-                    <img src="./assets/images/icons/Layer 2.webp" alt="Hubspot" width="150" height="50">
-                </div>
-                <div class="logos">
-                    <img src="./assets/images/icons/Microsoft Logo.webp" alt="Microsoft" width="150" height="50">
-                    <img src="./assets/images/icons/Google Logo.webp" alt="Google" width="150" height="50">
-                </div>
             </div>
-            <div class="hero-image">
-                <!-- Imagem otimizada com srcset -->
-                <img 
-                    src="./assets/images/hero-small.webp" 
-                    srcset="./assets/images/hero-small.webp 600w, ./assets/images/hero-large.webp 1200w" 
-                    sizes="(max-width: 768px) 600px, 1200px" 
-                    alt="Imagem da Advogada" 
-                    width="600" 
-                    height="400" 
-                    loading="lazy">
-                <div class="lawyer-info">
-                    <h2>Tiara Andini</h2>
-                    <p>Advogada</p>
+            <div class="hero-division">
+
+                <div class="hero-content">
+                    <h1>Sua Solução<br><span class="highlight">Consultoria Jurídica</span></h1>
+                    <p>Estamos aqui para ajudar você a cuidar da sua legalidade com o melhor serviço, especialmente para você.</p>
+                    <a href="#contact" class="btn btn-primary">Comece Agora</a>
+                    <p class="trusted">Confiado por 10+ empresas na Indonésia</p>
+                    <div class="logos">
+                        <img src="./assets/images/icons/Airbnb Logo.webp" alt="Airbnb" width="150" height="50">
+                        <img src="./assets/images/icons/Layer 2.webp" alt="Hubspot" width="150" height="50">
+                    </div>
+                    <div class="logos">
+                        <img src="./assets/images/icons/Microsoft Logo.webp" alt="Microsoft" width="150" height="50">
+                        <img src="./assets/images/icons/Google Logo.webp" alt="Google" width="150" height="50">
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Imagem otimizada com srcset -->
+                    <img 
+                        src="./assets/images/hero-small.webp" 
+                        srcset="./assets/images/hero-small.webp 600w, ./assets/images/hero-large.webp 1200w" 
+                        sizes="(max-width: 768px) 600px, 1200px" 
+                        alt="Imagem da Advogada" 
+                        width="600" 
+                        height="400" 
+                        loading="lazy">
+                    <div class="lawyer-info">
+                        <h2>Tiara Andini</h2>
+                        <p>Advogada</p>
+                    </div>
                 </div>
             </div>
         </div>
