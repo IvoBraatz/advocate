@@ -10,7 +10,10 @@
     <link rel="preload" href="./assets/css/reset.css" as="style">
     <link rel="preload" href="./assets/css/main.css" as="style">
     <link rel="preload" href="./assets/images/bghr.webp" as="image" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
     <link href="./assets/css/reset.css" rel="stylesheet">
     <link href="./assets/css/main.css" rel="stylesheet">
     
@@ -43,6 +46,29 @@
             align-items: center;
             justify-content: center;
             padding: 50px 20px;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+        .hero p {
+            font-size: 1rem;
+            text-align: center;
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: var(--btn-radius);
+            transition: background var(--transition-speed);
+        }
+        .btn:hover {
+            background: var(--secondary-color);
         }
     </style>
 </head>
@@ -73,16 +99,24 @@
                 <a href="#contact" class="btn btn-primary">Comece Agora</a>
                 <p class="trusted">Confiado por 10+ empresas na Indonésia</p>
                 <div class="logos">
-                    <img src="./assets/images/icons/Airbnb Logo.webp" alt="Airbnb" width="150" height="50" loading="lazy">
-                    <img src="./assets/images/icons/Layer 2.webp" alt="Hubspot" width="150" height="50" loading="lazy">
+                    <img src="./assets/images/icons/Airbnb Logo.webp" alt="Airbnb" width="150" height="50">
+                    <img src="./assets/images/icons/Layer 2.webp" alt="Hubspot" width="150" height="50">
                 </div>
                 <div class="logos">
-                    <img src="./assets/images/icons/Microsoft Logo.webp" alt="Microsoft" width="150" height="50" loading="lazy">
-                    <img src="./assets/images/icons/Google Logo.webp" alt="Google" width="150" height="50" loading="lazy">
+                    <img src="./assets/images/icons/Microsoft Logo.webp" alt="Microsoft" width="150" height="50">
+                    <img src="./assets/images/icons/Google Logo.webp" alt="Google" width="150" height="50">
                 </div>
             </div>
             <div class="hero-image">
-                <img src="./assets/images/hero.webp" alt="Imagem da Advogada" width="600" height="400" loading="lazy">
+                <!-- Imagem otimizada com srcset -->
+                <img 
+                    src="./assets/images/hero-small.webp" 
+                    srcset="./assets/images/hero-small.webp 600w, ./assets/images/hero-large.webp 1200w" 
+                    sizes="(max-width: 768px) 600px, 1200px" 
+                    alt="Imagem da Advogada" 
+                    width="600" 
+                    height="400" 
+                    loading="lazy">
                 <div class="lawyer-info">
                     <h2>Tiara Andini</h2>
                     <p>Advogada</p>
@@ -98,48 +132,26 @@
             <p>Tornamos o processo de legalização simples e eficaz para o crescimento do seu negócio.</p>
             <div class="services-list">
                 <div class="service-card">
-                    <img src="./assets/images/icons/Bag.webp" alt="Ícone 1" loading="lazy">
+                    <img src="./assets/images/icons/Bag.webp" alt="Ícone 1" width="80" height="80">
                     <h3>Direito Ambiental</h3>
                     <p>Aborde a conformidade ambiental e a sustentabilidade com confiança.</p>
                 </div>
                 <div class="service-card">
-                    <img src="./assets/images/icons/Circle Layer.webp" alt="Ícone 2" loading="lazy">
+                    <img src="./assets/images/icons/Circle Layer.webp" alt="Ícone 2" width="80" height="80">
                     <h3>Direito Corporativo</h3>
                     <p>Proteja sua empresa com serviços corporativos e comerciais personalizados.</p>
                 </div>
             </div>
             <div class="services-list">
                 <div class="service-card">
-                    <img src="./assets/images/icons/Rocket.webp" alt="Ícone 3" loading="lazy">
+                    <img src="./assets/images/icons/Rocket.webp" alt="Ícone 3" width="80" height="80">
                     <h3>Direito de TI</h3>
                     <p>Navegue por regulamentações de TI, segurança de dados e políticas tecnológicas de forma eficaz.</p>
                 </div>
                 <div class="service-card">
-                    <img src="./assets/images/icons/User Arrows.webp" alt="Ícone 4" loading="lazy">
+                    <img src="./assets/images/icons/User Arrows.webp" alt="Ícone 4" width="80" height="80">
                     <h3>Outros Serviços</h3>
                     <p>Deixe-nos lidar com conformidades, disputas e outros desafios jurídicos para você.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Estatísticas -->
-    <section id="statistics" class="statistics">
-        <div class="container">
-            <h2>Alguns Números que Importam</h2>
-            <p>Nossas conquistas ao longo da jornada representadas em números</p>
-            <div class="stats-list">
-                <div class="stat-item">
-                    <h3>30</h3>
-                    <p>Clientes</p>
-                </div>
-                <div class="stat-item">
-                    <h3>300+</h3>
-                    <p>Casos de Legalidade Empresarial</p>
-                </div>
-                <div class="stat-item">
-                    <h3>8</h3>
-                    <p>Anos de Jornada</p>
                 </div>
             </div>
         </div>
@@ -153,7 +165,7 @@
                 <div class="testimonial-item">
                     <p>Tivemos uma experiência incrível trabalhando com Lawliet e ficamos impressionados. Eles fizeram uma grande diferença em apenas três semanas. Nossa equipe é grata pelas melhorias maravilhosas que eles fizeram.</p>
                     <div class="testimonial-info">
-                        <img src="./assets/images/icons/Photo.webp" alt="Anya Taylor Joy" loading="lazy">
+                        <img src="./assets/images/icons/Photo.webp" alt="Anya Taylor Joy" width="50" height="50">
                         <div>
                             <h3>Anya Taylor Joy</h3>
                             <p>CEO, SF Industries</p>
@@ -163,7 +175,7 @@
                 <div class="testimonial-item">
                     <p>Lawliet colaborou com nossa equipe em vários projetos, como Aplicativos de Compartilhamento de Fotos e Redes Sociais Personalizadas. A experiência foi agradável, profissional e superou nossas expectativas.</p>
                     <div class="testimonial-info">
-                        <img src="./assets/images/icons/Photo.webp" alt="Sri Alam" loading="lazy">
+                        <img src="./assets/images/icons/Photo.webp" alt="Sri Alam" width="50" height="50">
                         <div>
                             <h3>Sri Alam</h3>
                             <p>CEO, Membangun GROUP</p>
@@ -181,11 +193,11 @@
                 <h2>Perguntas Complexas?</h2>
                 <p>Solicite um orçamento personalizado para o seu problema jurídico. Entre em contato conosco hoje para uma consulta gratuita!</p>
                 <a href="tel:+1234567890" class="btn btn-secondary">
-                    <span><img src="./assets/images/Call.webp" alt="Ligue Agora" width="50" height="50" loading="lazy"></span> Ligue Agora
+                    <span><img src="./assets/images/Call.webp" alt="Ligue Agora" width="50" height="50"></span> Ligue Agora
                 </a>
             </div>
             <div class="contact-image">
-                <img src="./assets/images/Group 30.webp" alt="Consultoria Jurídica" width="400" height="300" loading="lazy">
+                <img src="./assets/images/Group 30.webp" alt="Consultoria Jurídica" width="400" height="300">
             </div>
         </div>
     </section>
