@@ -77,25 +77,16 @@ body {
 
 /* Hero Section */
 .hero {
+    background-image: url('/assets/images/bghr.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--light-color);
     padding: 50px 20px;
     position: relative;
     overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -200px;
-    width: 600px;
-    height: 600px;
-    background: rgba(69, 123, 157, 0.1);
-    border-radius: 50%;
-    z-index: 0;
 }
 
 .hero-container {
@@ -115,6 +106,7 @@ body {
 .hero-content .badge {
     display: flex;
     background: #E7F6FF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: #1d3557;
     padding: 10px 10px;
     border-radius: 20px;
@@ -522,5 +514,14 @@ body {
     }
     .contact-content {
         max-width: 100%;
+    }
+    .statistics {
+        padding: 50px 20px;
+    }
+    .statistics h2{
+        font-size: 2rem;
+    }
+    .stat-item p{
+        font-size: .7rem;
     }
 }
