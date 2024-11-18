@@ -1,0 +1,10 @@
+{
+    "name": "landing-page-advogado",
+    "version": "1.0.0",
+    "description": "Landing page para advogado.",
+    "scripts": {
+        "start": "echo \"Configure o servidor ou frontend\""
+    },
+    "author": "Seu Nome",
+    "license": "MIT"
+}
