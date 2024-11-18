@@ -283,7 +283,7 @@ body {
 
 /* Statistics Section */
 .statistics {
-    background-image: url('../../assets/images/statistics.webp');
+    background-image: url('../../assets/images/icons/statistics.webp');
     background-position: center;
     background-attachment: fixed;
     color: #fff;
